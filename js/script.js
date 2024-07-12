@@ -80,28 +80,18 @@ const user_score = document.getElementById('humanScore');
 const computer_score = document.getElementById('computerScore');
 
 function getHumanChoice(userInput) {
-
-
-    
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-
-
-
-    //console.log(userInput);
     let winner;
 
     if (userInput === computerChoice) {
-        //console.log("It's a tie!");
         winner = 'none';
     } else if (
         (userInput === 'rock' && computerChoice === 'scissors') ||
         (userInput === 'paper' && computerChoice === 'rock') ||
         (userInput === 'scissors' && computerChoice === 'paper')
     ) {
-        //console.log("You won this round!");
         winner = 'human';
     } else {
-        //console.log("You lost this round!");
         winner = 'computer';
     }
 
