@@ -1,4 +1,4 @@
-/*
+
 
 const prompt = require('prompt-sync')();
 
@@ -67,13 +67,17 @@ function playGame() {
 
 playGame();
 
-*/
+
+
+
+
+/*
 const choices = ["rock", "scissors", "paper"];
 
 let humanScore = 0;
 let computerScore = 0;
 
-
+const roundNum = document.getElementById('roundNum');
 const userChoice = document.getElementById('userChoice');
 const computerDisplay = document.getElementById('computerChoice');
 const user_score = document.getElementById('humanScore');
@@ -101,7 +105,21 @@ function getHumanChoice(userInput) {
         humanScore++;
     }
 
-    userChoice.textContent = `You choose: ${userInput}`;
+    for (let i = 0; i < 5; i++) {
+        roundNum.textContent = `Round: ${round}`;
+        
+
+        console.log("End of Round " + (i + 1));
+        console.log("Your score is: " + humanScore);
+        console.log("The opponent's score is " + computerScore);
+    }
+
+    console.log("End of the game!");
+    console.log("Your final score is: " + humanScore);
+    console.log("The opponent's final score is: " + computerScore)
+
+
+userChoice.textContent = `You choose: ${userInput}`;
 computerDisplay.textContent = `Computer choose: ${computerChoice}`;
 user_score.textContent = `You: ${humanScore}`;
 computer_score.textContent = `Computer: ${computerScore}`;
