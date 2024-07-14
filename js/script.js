@@ -15,9 +15,10 @@ function getHumanChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+let winner;
 
 function playRound(humanChoice, computerChoice) {
-    let winner;
+    
 
     if (humanChoice === computerChoice) {
         console.log("It's a tie!");
